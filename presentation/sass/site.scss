@@ -1,0 +1,16 @@
+@import "partials/imports";
+
+//reset.css - reset everything first
+@import "partials/reset";
+
+//make the grid methods and the layout (custom grid) available 
+@import "partials/grid";
+@import "partials/layout";
+
+//now load the custom fixes
+@import "partials/primary";
+
+//now, tell the printer what to hide
+@import "partials/print";
+e
+@import "partials/print";

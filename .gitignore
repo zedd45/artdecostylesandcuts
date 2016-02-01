@@ -1,0 +1,9 @@
+# yeah, back then textmate was all the rage
+artdeco.tmproj
+
+# Sass
+.sass-cache
+
+
+# logs
+logs/

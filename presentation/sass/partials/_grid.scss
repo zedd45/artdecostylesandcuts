@@ -1,0 +1,40 @@
+@mixin grid($columns: 12, $column_width: 6em, $column_margin: 1em, $gridId: "main-container"){
+  
+  //ERR checking - default to EMs
+  @if unitless($column_width) {
+    @warn "Assuming EM for grid -> colum_width";
+    $column_width: $column_width * 1em;
+  }  
+  @if unitless($column_margin) {
+    @warn "Assuming EM for grid -> column_margin";
+    $column_margin: $column_margin * 1em;
+  }
+  
+  ///*Think about how to make this either a global var, or extensible somehow*/
+  ##{$gridId} {
+    width: $columns * $column_width + ($column_margin * ($columns + 1));
+    margin:0 auto;
+  }
+  
+  .col {
+    display: inline-block;
+    float: left;
+    position: relative;
+    padding: 10px;
+    margin: {
+       left:$column_margin/2;
+       right:$column_margin/2;
+    }
+  }
+  
+  .last {
+    margin-right:0;
+  }
+
+  @for $i from 1 through $columns {
+    .col-#{$i} { 
+      width: ($column_width * $i) + ($column_margin * $i) + 1;
+      @extend .col;
+    }
+  }
+}

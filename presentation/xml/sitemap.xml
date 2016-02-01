@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sitemap>
+	<nav tier="primary">
+		<page>
+		  <name>home</name>
+			<title>Hair Styles and Hair Cuts</title>
+			<link>/</link>
+			<keywords>Hair, Cuts, Hair Cuts, Hair Stylists</keywords>
+			<description></description>
+		</page>
+		<page>
+		  <name>stylists</name>
+		  <title>Hair Styles - Stylist Showcase</title>
+		  <link>hair_stylists</link>
+		  <keywords></keywords>
+		  <description></description>
+		</page>
+		<page>
+		  <name>products</name>
+		  <title>Hair products and Services</title>
+		  <link>products_services</link>
+		  <keywords></keywords>
+		  <description></description>
+		</page>
+		<page>
+		  <name>contact</name>
+		  <title>Contact Us</title>
+		  <link>contact</link>
+		  <keywords></keywords>
+		  <description></description>
+		</page>
+	</nav>
+	<!--<misc>
+    <page>
+		  <name>misc</name>
+			<friendlyname>Miscellaneous page</friendlyname>
+			<title>Miscellaneous page</title>
+			<link>misc</link>
+		</page>
+	</misc>-->
+	<hidden>
+		<page>
+			<name>sitemap</name>
+			<friendlyname>Sitemap</friendlyname>
+			<title>Site Map for SITENAME</title>
+			<link>sitemap</link>
+		</page>
+	</hidden>
+</sitemap>

@@ -1,0 +1,12 @@
+#errorList {
+	color:red;
+	font-style:italic;
+	padding:10px;
+	width:75%;
+	display:none;
+}
+
+#errorList .errListHeading {
+	font-size:110%;
+	font-weight:bold;
+}

@@ -1,0 +1,8 @@
+#promo-area, #site-navigation, #utility-nav {
+	display:none;
+}
+
+#footer {
+	background-color:#fff;
+	color:#000;
+}

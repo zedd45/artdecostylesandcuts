@@ -1,0 +1,66 @@
+@mixin buttonSprite($color: #000, $height: 21px, $sprite: "../presentation/images/sprites/button_sprite.png", $secondaryElement: 'span') {
+	background: transparent url('#{$sprite}') no-repeat bottom left;
+	display:inline-block;
+	position:relative;
+	border: 0; 
+	cursor: pointer; 
+	overflow:hidden;
+	text-decoration: none !important;
+	padding: 0 0 0 12px !important;
+	
+	&:hover {
+		background-position: top left;
+		#{$secondaryElement} {
+			background-position: top right;
+		}
+	}
+		
+	#{$secondaryElement} { 
+		background: transparent url('#{$sprite}') no-repeat bottom right; 
+		position: relative;
+		left:5px;
+		display: block;
+		white-space: nowrap;
+		padding: 7px 22px 5px 1px;
+		color:$color;
+		@if unitless($height){
+			@warn "no unit provided for #{$height}.  Assuming PX.";
+			$height: $height * 1px;
+		}
+		line-height:$height;	
+	}
+}
+
+@mixin button($onColor: #fff, $offColor: #000, $height: 21px, $sprite: "../presentation/images/sprites/button_sprite.png", $secondaryElement: 'span'){
+	background: transparent url('#{$sprite}') no-repeat bottom left;
+	display:inline-block;
+	position:relative;
+	border: 0; 
+	cursor: pointer; 
+	overflow:hidden;
+	text-decoration: none !important;
+	padding: 0 0 0 12px !important;
+	
+	&:hover {
+		#{$secondaryElement} {
+			color: $onColor;
+		}
+	}
+		
+	#{$secondaryElement} { 
+		background: transparent url('#{$sprite}') no-repeat bottom right; 
+		position: relative;
+		left:5px;
+		display: block;
+		white-space: nowrap;
+		padding: 7px 22px 5px 1px;
+		color:$offColor;
+		@if unitless($height){
+			@warn "no unit provided for #{$height}.  Assuming PX.";
+			$height: $height * 1px;
+		}
+		line-height:$height;	
+	}
+}
+	
+	

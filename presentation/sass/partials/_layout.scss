@@ -1,0 +1,81 @@
+/** Grid **/
+@include grid;
+
+#header {
+  @extend .col-12;
+  #logo-container {
+    @extend .col-6;
+    ///*margin-top:3em;*/
+  }
+}
+
+#footer {
+  margin: 1em auto;
+  padding:1em;
+  text-align:center;
+}
+
+#content-container {
+  @include clearfix;
+}
+
+#homepage {
+  #primary-content { //, #secondary-content
+    @extend .col-6;
+  }
+  ///*FIXME: column math*/
+  #secondary-content {
+    @extend .col-5;
+    @extend .last;
+  }
+}
+
+#products {
+  #primary-content {
+    @extend .col-5;
+    
+    li {
+      @extend .col-1;
+    }
+    ul {
+      @include clearfix;
+    }
+  }
+  
+  #secondary-content {
+    @extend .col-5;
+  }
+}
+
+.hours-container {
+  @extend .col-3;
+}
+.address-container {
+  @extend .col-2;
+}
+
+.hours-container, .address-container {
+  span {
+    @extend .col-1;
+  }
+} @extend .col-7;
+  }
+  .stylist-container {
+    @extend .col-1;
+    margin:0 1.5em;
+  }
+}
+
+.hours-container {
+  @extend .col-3;
+}
+.address-container {
+  @extend .col-2;
+}
+
+.hours-container, .address-container {
+  span {
+    @extend .col-1;
+  }
+}
+

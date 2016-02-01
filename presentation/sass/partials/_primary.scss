@@ -1,0 +1,175 @@
+//SASS vars
+
+/** Default Styles **/
+body { 
+	font:.7em arial, sans-serif;
+	background-color:#000;
+	color:#fff;
+}
+
+p, li, h1, h2, h3, h4, h5, h6, header { 
+	margin:1em 0;
+}
+
+img { 
+	border:none; 
+}
+
+/** basic tag customization **/
+a {
+    color:#6495ED;
+    text-decoration:underline; 
+    
+    /*&:link, &:visited {
+          color:blue;
+        }*/
+    &:hover, &:active{
+      color:#fff;
+      text-decoration:none;
+    }
+}
+
+h1 { 
+/*  color: #000;*/
+	font-size:1.5em;
+}
+h2 { 
+/*  color:#000;*/
+	font-size:1.4em;
+}
+h3 { 
+/*  color: #000;*/
+	font-size:1.3em;
+}
+h4 {
+/*    color:#000;*/
+    font-size:1.2em;
+}
+h5 {
+/*    color:#000;*/
+    font-size:1.1em;
+}
+
+ol {
+    padding: .2em 0 .2em 2.5em;
+	list-style-type:decimal;
+	ol {
+		list-style-type:lower-roman;
+	}
+}
+
+#homepage {
+  #primary-content {
+    color:#80B6E5;  //Was: #6495ED;
+  }
+  
+  #secondary-content {
+    background: url('/presentation/images/homepage-bg.png') no-repeat;
+    min-height:33em;
+    margin-top:-2em;    
+  }
+  
+  .hours-container {
+    padding:0;
+    h3, p:last-child {
+      text-indent:1em;
+    }
+    p {
+      margin:.1em 0;
+      padding:0;
+      @include clearfix;
+    }
+    ///*not the best place for this..*/
+    $spanPadding: "-1em auto";
+    span.day {
+      padding:#{$spanPadding};
+    }
+    span.hours {
+      color:#2677E4;
+      padding:#{$spanPadding};
+    }    
+  }
+}
+
+#products {
+  #primary-content {
+    li {
+      background: url('/presentation/images/bullet.png') no-repeat;
+      padding:0 0 0 1em;
+      text-transform:capitalize;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  }
+  
+  #secondary-content {
+    background: url('/presentation/images/products-bg.png') no-repeat;
+    min-height:40em;
+  }
+}
+
+#stylists {
+  .lightbox-trigger-all {
+    display:block;
+    margin:10px 0;
+  }
+  a.lightbox-photo.hidden {
+    display:none;
+  }
+}
+
+#primary-nav { 
+	font:1.2em verdana, arial, sans-serif; 
+  text-transform: uppercase;
+  
+	li { 
+		display:inline;
+		padding:0 .7em 1em .3em;
+		text-transform:capitalize;
+		border-left: 1px groove #f3f3f3; //#365397;
+		
+		//&:first-child { border-left:none; }
+		
+		a {
+		  color:#fff;
+		  text-decoration:none;
+		  &:hover {
+		    text-decoration: underline;
+		  }
+		}
+	}
+}
+main-container {
+    background: url('/presentation/images/products-bg.png') right 11em no-repeat;
+  }
+  
+  #primary-content {
+    h3 {
+      text-transform:uppercase;
+    }
+    li {
+      background: url('/presentation/images/bullet.png') no-repeat;
+      color:#c3c3c3; //6495ED
+      padding:0 0 0 1em;
+      text-transform:capitalize;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      margin: 0;
+    }
+  }
+}
+
+#stylists {
+  .lightbox-trigger-all {
+    display:block;
+    margin:10px 0;
+  }
+  a.lightbox-photo.hidden {
+    display:none;
+  }
+  .stylist-wrapper {
+    @extend .clearfix;
+  }
+}

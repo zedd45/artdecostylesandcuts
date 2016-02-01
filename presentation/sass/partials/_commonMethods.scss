@@ -1,0 +1,31 @@
+//This should really be a class that gets extended, NOT a mixin.  this causes CSS bloat.
+@mixin clearfix {
+  display: inline-block;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  ///* * html & { height: 1px; } I don't support IE6 any longer. */
+}
+
+@mixin IEHasLayoutFix {
+	overflow:visible;
+	zoom:1;
+}
+
+@mixin roundedCorners($width){
+	border-radius:$width;
+	-moz-border-radius:$width;
+	-webkit-border-radius:$width;
+	-khtml-border-radius:$width;
+}
+
+@mixin roundedCornersDistinct($topLeft,$topRight,$bottomLeft,$bottomRight){
+    border-radius: $topLeft $topRight $bottomLeft $bottomRight;
+    -moz-border-radius: $topLeft $topRight $bottomLeft $bottomRight;
+    -webkit-border-radius: $topLeft $topRight $bottomLeft $bottomRight;
+    -khtml-border-radius: $topLeft $topRight $bottomLeft $bottomRight;
+}

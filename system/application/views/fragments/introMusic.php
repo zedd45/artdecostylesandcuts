@@ -1,0 +1,2 @@
+<embed src="/presentation/music/fashionista-intro-fade.mp3" autostart="true" loop="false" id="intro-music-player">
+<script type="text/javascript">if(-1!=navigator.userAgent.indexOf("Chrome")){var QTPlayer=document.getElementById("intro-music-player");QTPlayer.style.height="45px";QTPlayer.style.overflow="hidden"}</script>

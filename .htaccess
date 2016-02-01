@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.php/main/$1 [L]
+</IfModule>
+<IfModule !mod_rewrite.c>
+ErrorDocument 404 /index.php
+</IfModule>
+
+
+#START CACHING / PERFORMANCE
+
+# 480 weeks
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+	Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+ 
+# 2 Days
+<FilesMatch "\.(txt)$">
+	Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+
+# 15 Minutes
+<FilesMatch "\.(html|htm|php|xml)$">
+	Header set Cache-Control "max-age=900, must-revalidate"
+</FilesMatch>
+ 
+#stop the ETags - we reside on a single server now, but this still takes bandwith to send!
+Header unset ETag
+FileETag None
+
+#gzip != deflate, but deflate is the name of the module apache uses for gzip.  Crazy patching fools!
+AddType application/x-javascript .js 
+AddOutputFilterByType DEFLATE text/html text/css application/x-javascript text/xml text/plain
+
+
+#END CACHING / PERFORMANCE
